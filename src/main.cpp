@@ -9,6 +9,7 @@ int main()
 {
   ApiKey apiKey;
   SOCKET s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+  std::cout << s << std::endl;
   std::vector<int> a;
   return 0;
 }
