@@ -2,13 +2,13 @@
         "version": "2.0.0",
         "tasks": [
             {
-                "type": "cppbuild",
+                "type": "shell",
                 "label": "C/C++: g++ build active file",
-                "command": "/usr/bin/g++",
+                "command": "g++",
                 "args": [
+                    "src/main.cpp src/ApiKey.cpp",
                     "-o",
-                    "src/main.cpp",
-                    "main.exe",
+                    "output",
                     "-lWs2_32"
                 ],
                 "options": {
@@ -21,7 +21,7 @@
                     "kind": "build",
                     "isDefault": true
                 },
-                "detail": "compiler: /usr/bin/g++"
+                "detail": "compiler: g++"
             }
         ]
     }
