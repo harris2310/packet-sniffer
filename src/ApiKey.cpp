@@ -17,11 +17,10 @@ ApiKey::ApiKey()
     std::cerr << "WSAStartup failed with error: " << result << std::endl;
   }
   SOCKET s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-  std::cout << s << std::endl;
   int iResult;
-  std::string sendbuf = "this is a test";
-  char recvbuf[DEFAULT_BUFLEN];
-  int recvbuflen = DEFAULT_BUFLEN;
+  std::string sendbuf = "hi";
+  recvbuf[DEFAULT_BUFLEN];
+  recvbuflen = DEFAULT_BUFLEN;
 }
 
 ApiKey::~ApiKey()
@@ -37,7 +36,7 @@ int ApiKey::connect()
 
   do
   {
-    iResult = recv(ApiKey::s, recvbuf, recvbuflen, 0);
+    iResult = recv(s, recvbuf, recvbuflen, 0);
     if (iResult > 0)
       printf("Bytes received: %d\n", iResult);
     else if (iResult == 0)

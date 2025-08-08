@@ -8,8 +8,8 @@ class ApiKey
 private:
   SOCKET s;
   char recvbuf[DEFAULT_BUFLEN];
-  int recvbuflen = DEFAULT_BUFLEN;
-  std::string sendbuf = "this is a test";
+  int recvbuflen;
+  std::string sendbuf;
 
 public:
   ApiKey();
